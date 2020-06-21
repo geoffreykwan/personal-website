@@ -4,7 +4,6 @@ import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-import { MuiThemeProvider } from '@material-ui/core/styles';
 import orderBy from 'lodash/orderBy';
 import SortableComponent from '../shared/SortableComponent';
 import CustomTableSortLabel from '../shared/CustomTableSortLabel';
@@ -80,63 +79,61 @@ class FavoriteShows extends SortableComponent {
   }
   render() {
     return (
-      <MuiThemeProvider theme={this.theme}>
-        <div style={this.state.loaded ? {} : { display: 'none' }}>
-          <h2>My Top 10 Favorite Shows</h2>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>
-                  <CustomTableSortLabel
-                    columnName="rank"
-                    state={this.state}
-                    handleSort={this.handleSort}
-                  >
-                    Rank
-                  </CustomTableSortLabel>
+      <div style={this.state.loaded ? {} : { display: 'none' }}>
+        <h2>My Top 10 Favorite Shows</h2>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>
+                <CustomTableSortLabel
+                  columnName="rank"
+                  state={this.state}
+                  handleSort={this.handleSort}
+                >
+                  Rank
+                </CustomTableSortLabel>
+              </TableCell>
+              <TableCell>
+                <CustomTableSortLabel
+                  columnName="title"
+                  state={this.state}
+                  handleSort={this.handleSort}
+                >
+                  Title
+                </CustomTableSortLabel>
+              </TableCell>
+              <TableCell>Amazon</TableCell>
+              <TableCell>Hulu</TableCell>
+              <TableCell>Netflix</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {orderBy(
+              this.state.shows,
+              [
+                (show) => {
+                  if (this.state.columnToSort === 'rank') {
+                    return show[this.state.columnToSort];
+                  } else {
+                    return show[this.state.columnToSort].toLowerCase();
+                  }
+                },
+              ],
+              this.state.sortDirection
+            ).map((show) => (
+              <TableRow key={show.rank} hover={true}>
+                <TableCell style={{ textAlign: 'center' }}>
+                  {show.rank}
                 </TableCell>
-                <TableCell>
-                  <CustomTableSortLabel
-                    columnName="title"
-                    state={this.state}
-                    handleSort={this.handleSort}
-                  >
-                    Title
-                  </CustomTableSortLabel>
-                </TableCell>
-                <TableCell>Amazon</TableCell>
-                <TableCell>Hulu</TableCell>
-                <TableCell>Netflix</TableCell>
+                <TableCell>{show.title}</TableCell>
+                <TableCell>{this.createAmazonLink(show)}</TableCell>
+                <TableCell>{this.createHuluLink(show)}</TableCell>
+                <TableCell>{this.createNetflixLink(show)}</TableCell>
               </TableRow>
-            </TableHead>
-            <TableBody>
-              {orderBy(
-                this.state.shows,
-                [
-                  (show) => {
-                    if (this.state.columnToSort === 'rank') {
-                      return show[this.state.columnToSort];
-                    } else {
-                      return show[this.state.columnToSort].toLowerCase();
-                    }
-                  },
-                ],
-                this.state.sortDirection
-              ).map((show) => (
-                <TableRow key={show.rank} hover={true}>
-                  <TableCell style={{ textAlign: 'center' }}>
-                    {show.rank}
-                  </TableCell>
-                  <TableCell>{show.title}</TableCell>
-                  <TableCell>{this.createAmazonLink(show)}</TableCell>
-                  <TableCell>{this.createHuluLink(show)}</TableCell>
-                  <TableCell>{this.createNetflixLink(show)}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      </MuiThemeProvider>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
     );
   }
 }

@@ -5,7 +5,6 @@ import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-import { MuiThemeProvider } from '@material-ui/core/styles';
 import orderBy from 'lodash/orderBy';
 import SortableComponent from '../shared/SortableComponent';
 import CustomTableSortLabel from '../shared/CustomTableSortLabel';
@@ -43,67 +42,65 @@ class ReleaseDates extends SortableComponent {
   }
   render() {
     return (
-      <MuiThemeProvider theme={this.theme}>
-        <div style={this.state.loaded ? {} : { display: 'none' }}>
-          <h2>Release Dates</h2>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>
-                  <CustomTableSortLabel
-                    columnName="name"
-                    state={this.state}
-                    handleSort={this.handleSort}
-                  >
-                    Name
-                  </CustomTableSortLabel>
-                </TableCell>
-                <TableCell>
-                  <CustomTableSortLabel
-                    columnName="system"
-                    state={this.state}
-                    handleSort={this.handleSort}
-                  >
-                    System
-                  </CustomTableSortLabel>
-                </TableCell>
-                <TableCell>
-                  <CustomTableSortLabel
-                    columnName="date"
-                    state={this.state}
-                    handleSort={this.handleSort}
-                  >
-                    Release Date
-                  </CustomTableSortLabel>
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {orderBy(
-                this.hideReleasedItemsAfter30Days(this.state.releaseDates),
-                [
-                  (releaseDate) =>
-                    releaseDate[this.state.columnToSort].toLowerCase(),
-                ],
-                this.state.sortDirection
-              ).map((releaseDate) => (
-                <TableRow
-                  key={releaseDate.id}
-                  onClick={() => {
-                    this.goToReleaseDatePage(releaseDate.id);
-                  }}
-                  style={{ cursor: 'pointer' }}
-                  hover={true}
+      <div style={this.state.loaded ? {} : { display: 'none' }}>
+        <h2>Release Dates</h2>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>
+                <CustomTableSortLabel
+                  columnName="name"
+                  state={this.state}
+                  handleSort={this.handleSort}
                 >
-                  <TableCell>{releaseDate.name}</TableCell>
-                  <TableCell>{releaseDate.system}</TableCell>
-                  <TableCell>{releaseDate.date}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      </MuiThemeProvider>
+                  Name
+                </CustomTableSortLabel>
+              </TableCell>
+              <TableCell>
+                <CustomTableSortLabel
+                  columnName="system"
+                  state={this.state}
+                  handleSort={this.handleSort}
+                >
+                  System
+                </CustomTableSortLabel>
+              </TableCell>
+              <TableCell>
+                <CustomTableSortLabel
+                  columnName="date"
+                  state={this.state}
+                  handleSort={this.handleSort}
+                >
+                  Release Date
+                </CustomTableSortLabel>
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {orderBy(
+              this.hideReleasedItemsAfter30Days(this.state.releaseDates),
+              [
+                (releaseDate) =>
+                  releaseDate[this.state.columnToSort].toLowerCase(),
+              ],
+              this.state.sortDirection
+            ).map((releaseDate) => (
+              <TableRow
+                key={releaseDate.id}
+                onClick={() => {
+                  this.goToReleaseDatePage(releaseDate.id);
+                }}
+                style={{ cursor: 'pointer' }}
+                hover={true}
+              >
+                <TableCell>{releaseDate.name}</TableCell>
+                <TableCell>{releaseDate.system}</TableCell>
+                <TableCell>{releaseDate.date}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
     );
   }
 }

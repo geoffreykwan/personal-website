@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { createMuiTheme } from '@material-ui/core/styles';
 
 class SortableComponent extends Component {
   state = {
@@ -10,14 +9,6 @@ class SortableComponent extends Component {
   };
   constructor() {
     super();
-    this.theme = createMuiTheme({
-      palette: {
-        type: 'dark',
-        background: {
-          default: '#222',
-        },
-      },
-    });
     this.invertDirection = {
       asc: 'desc',
       desc: 'asc',

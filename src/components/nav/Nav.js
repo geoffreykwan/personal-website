@@ -13,7 +13,7 @@ class Nav extends Component {
   iconSize = '1.5em';
   render() {
     return (
-      <nav style={{ position: 'fixed' }}>
+      <nav style={{ display: 'flex', flexDirection: 'column' }}>
         <NavItem
           path="/favorite-essential-mixes"
           name="Favorite Essential Mixes"
