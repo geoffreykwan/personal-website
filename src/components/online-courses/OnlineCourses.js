@@ -7,6 +7,8 @@ import TableCell from '@material-ui/core/TableCell';
 import SortableComponent from '../shared/SortableComponent';
 import orderBy from 'lodash/orderBy';
 import CustomTableSortLabel from '../shared/CustomTableSortLabel';
+import MenuButton from '../menu-button/MenuButton';
+import '../../App.css';
 
 class OnlineCourses extends SortableComponent {
   state = {
@@ -44,7 +46,12 @@ class OnlineCourses extends SortableComponent {
   render() {
     return (
       <div style={this.state.loaded ? {} : { display: 'none' }}>
-        <h2>Online Courses Completed</h2>
+        <div className="page-title-container">
+          <MenuButton
+            menuButtonClickHandler={this.props.menuButtonClickHandler}
+          />
+          <h2 className="page-title">Online Courses Completed</h2>
+        </div>
         <Table>
           <TableHead>
             <TableRow>

@@ -54,7 +54,7 @@ class ReleaseDate extends Component {
   }
   render() {
     return (
-      <div className="App" style={this.state.loaded ? {} : { display: 'none' }}>
+      <div style={this.state.loaded ? {} : { display: 'none' }}>
         <p style={{ marginTop: 100 }}>
           <a
             href={this.state.item.link}

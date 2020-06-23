@@ -7,6 +7,8 @@ import TableCell from '@material-ui/core/TableCell';
 import orderBy from 'lodash/orderBy';
 import SortableComponent from '../shared/SortableComponent';
 import CustomTableSortLabel from '../shared/CustomTableSortLabel';
+import MenuButton from '../menu-button/MenuButton';
+import '../../App.css';
 
 class NintendoSwitchGames extends SortableComponent {
   state = {
@@ -48,7 +50,12 @@ class NintendoSwitchGames extends SortableComponent {
   render() {
     return (
       <div style={this.state.loaded ? {} : { display: 'none' }}>
-        <h2>My Nintendo Switch Games</h2>
+        <div className="page-title-container">
+          <MenuButton
+            menuButtonClickHandler={this.props.menuButtonClickHandler}
+          />
+          <h2 className="page-title">My Nintendo Switch Games</h2>
+        </div>
         <Table>
           <TableHead>
             <TableRow>
