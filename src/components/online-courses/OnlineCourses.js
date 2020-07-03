@@ -8,7 +8,6 @@ import SortableComponent from '../shared/SortableComponent';
 import orderBy from 'lodash/orderBy';
 import CustomTableSortLabel from '../shared/CustomTableSortLabel';
 import MenuButton from '../menu-button/MenuButton';
-import '../../App.css';
 
 class OnlineCourses extends SortableComponent {
   state = {
@@ -52,7 +51,7 @@ class OnlineCourses extends SortableComponent {
           />
           <h2 className="page-title">Online Courses Completed</h2>
         </div>
-        <Table>
+        <Table className="main-table">
           <TableHead>
             <TableRow>
               <TableCell>

@@ -12,6 +12,10 @@
   margin-bottom: 50;
 }
 
+.main-table {
+  margin-bottom: 70px;
+}
+
 @media (max-width: 768px) {
   .main {
     margin-left: 0;

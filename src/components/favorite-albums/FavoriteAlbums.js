@@ -8,7 +8,6 @@ import SortableComponent from '../shared/SortableComponent';
 import orderBy from 'lodash/orderBy';
 import CustomTableSortLabel from '../shared/CustomTableSortLabel';
 import MenuButton from '../menu-button/MenuButton';
-import '../../App.css';
 
 class FavoriteAlbums extends SortableComponent {
   state = {
@@ -40,7 +39,7 @@ class FavoriteAlbums extends SortableComponent {
           />
           <h2 className="page-title">My Favorite Albums</h2>
         </div>
-        <Table>
+        <Table className="main-table">
           <TableHead>
             <TableRow>
               <TableCell>

@@ -8,7 +8,6 @@ import orderBy from 'lodash/orderBy';
 import SortableComponent from '../shared/SortableComponent';
 import CustomTableSortLabel from '../shared/CustomTableSortLabel';
 import MenuButton from '../menu-button/MenuButton';
-import '../../App.css';
 
 class FavoriteShows extends SortableComponent {
   state = {
@@ -88,7 +87,7 @@ class FavoriteShows extends SortableComponent {
           />
           <h2 className="page-title">My Top 10 Favorite Shows</h2>
         </div>
-        <Table>
+        <Table className="main-table">
           <TableHead>
             <TableRow>
               <TableCell>
