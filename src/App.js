@@ -58,6 +58,17 @@ class App extends Component {
               {backdrop}
               <Switch>
                 <Route
+                  path="/online-courses"
+                  exact
+                  render={() => {
+                    return (
+                      <OnlineCourses
+                        menuButtonClickHandler={this.toggleNavDrawer}
+                      />
+                    );
+                  }}
+                />
+                <Route
                   path="/favorite-essential-mixes"
                   exact
                   render={() => {
@@ -85,17 +96,6 @@ class App extends Component {
                   render={() => {
                     return (
                       <FavoriteAlbums
-                        menuButtonClickHandler={this.toggleNavDrawer}
-                      />
-                    );
-                  }}
-                />
-                <Route
-                  path="/online-courses"
-                  exact
-                  render={() => {
-                    return (
-                      <OnlineCourses
                         menuButtonClickHandler={this.toggleNavDrawer}
                       />
                     );
@@ -158,7 +158,7 @@ class App extends Component {
                   }}
                 />
                 <Route exact path="/">
-                  <Redirect to="/favorite-essential-mixes" />
+                  <Redirect to="/online-courses" />
                 </Route>
               </Switch>
             </div>

@@ -19,6 +19,12 @@ class NavDrawer extends Component {
     return (
       <nav className={navDrawerClasses}>
         <NavDrawerItem
+          path="/online-courses"
+          name="Online Courses Completed"
+          icon={<BsFillHouseFill size={this.iconSize} />}
+          toggleNavDrawer={this.props.toggleNavDrawer}
+        />
+        <NavDrawerItem
           path="/favorite-essential-mixes"
           name="Favorite Essential Mixes"
           icon={<IoMdRadio size={this.iconSize} />}
@@ -34,12 +40,6 @@ class NavDrawer extends Component {
           path="/favorite-albums"
           name="Favorite Albums"
           icon={<IoIosMusicalNotes size={this.iconSize} />}
-          toggleNavDrawer={this.props.toggleNavDrawer}
-        />
-        <NavDrawerItem
-          path="/online-courses"
-          name="Online Courses"
-          icon={<BsFillHouseFill size={this.iconSize} />}
           toggleNavDrawer={this.props.toggleNavDrawer}
         />
         <NavDrawerItem

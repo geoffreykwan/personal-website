@@ -16,6 +16,11 @@ class Nav extends Component {
       <div>
         <nav className="nav">
           <NavItem
+            path="/online-courses"
+            name="Online Courses Completed"
+            icon={<BsFillHouseFill size={this.iconSize} />}
+          />
+          <NavItem
             path="/favorite-essential-mixes"
             name="Favorite Essential Mixes"
             icon={<IoMdRadio size={this.iconSize} />}
@@ -29,11 +34,6 @@ class Nav extends Component {
             path="/favorite-albums"
             name="Favorite Albums"
             icon={<IoIosMusicalNotes size={this.iconSize} />}
-          />
-          <NavItem
-            path="/online-courses"
-            name="Online Courses"
-            icon={<BsFillHouseFill size={this.iconSize} />}
           />
           <NavItem
             path="/favorite-shows"
