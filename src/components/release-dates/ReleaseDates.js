@@ -50,7 +50,7 @@ class ReleaseDates extends SortableComponent {
           />
           <h2 className="page-title">Release Dates</h2>
         </div>
-        <Table className="main-table">
+        <Table>
           <TableHead>
             <TableRow>
               <TableCell>
@@ -106,6 +106,7 @@ class ReleaseDates extends SortableComponent {
             ))}
           </TableBody>
         </Table>
+        <div className="bottom-div"></div>
       </div>
     );
   }

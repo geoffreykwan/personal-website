@@ -55,7 +55,7 @@ class NintendoSwitchGames extends SortableComponent {
           />
           <h2 className="page-title">My Nintendo Switch Games</h2>
         </div>
-        <Table className="main-table">
+        <Table>
           <TableHead>
             <TableRow>
               <TableCell>
@@ -117,6 +117,7 @@ class NintendoSwitchGames extends SortableComponent {
             ))}
           </TableBody>
         </Table>
+        <div className="bottom-div"></div>
       </div>
     );
   }

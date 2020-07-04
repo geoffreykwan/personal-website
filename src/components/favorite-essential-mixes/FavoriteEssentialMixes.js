@@ -46,6 +46,7 @@ class FavoriteEssentialMixes extends SortableComponent {
           columnToSort={this.state.columnToSort}
           sortDirection={this.state.sortDirection}
         />
+        <div className="bottom-div"></div>
       </div>
     );
   }

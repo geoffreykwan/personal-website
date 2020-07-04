@@ -83,7 +83,7 @@ class FavoriteGames extends SortableComponent {
           />
           <h2 className="page-title">My Top 10 Favorite Games of All Time</h2>
         </div>
-        <Table className="main-table">
+        <Table>
           <TableHead>
             <TableRow>
               <TableCell>
@@ -147,6 +147,7 @@ class FavoriteGames extends SortableComponent {
             ))}
           </TableBody>
         </Table>
+        <div className="bottom-div"></div>
       </div>
     );
   }

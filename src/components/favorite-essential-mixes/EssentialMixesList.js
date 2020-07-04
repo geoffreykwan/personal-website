@@ -11,7 +11,7 @@ class EssentialMixesList extends Component {
   render() {
     const { essentialMixes } = this.props;
     return (
-      <Table className="main-table">
+      <Table>
         <TableHead>
           <TableRow>
             <TableCell>

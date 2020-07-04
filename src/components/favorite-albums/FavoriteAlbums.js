@@ -39,7 +39,7 @@ class FavoriteAlbums extends SortableComponent {
           />
           <h2 className="page-title">My Favorite Albums</h2>
         </div>
-        <Table className="main-table">
+        <Table>
           <TableHead>
             <TableRow>
               <TableCell>
@@ -77,6 +77,7 @@ class FavoriteAlbums extends SortableComponent {
             ))}
           </TableBody>
         </Table>
+        <div className="bottom-div"></div>
       </div>
     );
   }

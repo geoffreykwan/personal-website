@@ -51,7 +51,7 @@ class OnlineCourses extends SortableComponent {
           />
           <h2 className="page-title">Online Courses Completed</h2>
         </div>
-        <Table className="main-table">
+        <Table>
           <TableHead>
             <TableRow>
               <TableCell>
@@ -97,6 +97,7 @@ class OnlineCourses extends SortableComponent {
             ))}
           </TableBody>
         </Table>
+        <div className="bottom-div"></div>
       </div>
     );
   }

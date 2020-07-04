@@ -39,7 +39,7 @@ class FavoriteSets extends SortableComponent {
           />
           <h2 className="page-title">My Favorite Sets</h2>
         </div>
-        <Table className="main-table">
+        <Table>
           <TableHead>
             <TableRow>
               <TableCell>
@@ -87,6 +87,7 @@ class FavoriteSets extends SortableComponent {
             ))}
           </TableBody>
         </Table>
+        <div className="bottom-div"></div>
       </div>
     );
   }
