@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Nav from './components/nav/Nav';
 import NavDrawer from './components/nav-drawer/NavDrawer';
 import Backdrop from './components/backdrop/Backdrop';
+import About from './components/about/About';
 import FavoriteEssentialMixes from './components/favorite-essential-mixes/FavoriteEssentialMixes';
 import FavoriteSets from './components/favorite-sets/FavoriteSets';
 import FavoriteAlbums from './components/favorite-albums/FavoriteAlbums';
@@ -143,6 +144,15 @@ class App extends Component {
                       <NintendoSwitchGames
                         menuButtonClickHandler={this.toggleNavDrawer}
                       />
+                    );
+                  }}
+                />
+                <Route
+                  path="/about"
+                  exact
+                  render={() => {
+                    return (
+                      <About menuButtonClickHandler={this.toggleNavDrawer} />
                     );
                   }}
                 />

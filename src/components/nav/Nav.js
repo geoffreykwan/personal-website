@@ -3,6 +3,7 @@ import NavItem from './NavItem';
 import { BsController, BsFillHouseFill } from 'react-icons/bs';
 import {
   IoMdCalendar,
+  IoMdHappy,
   IoMdRadio,
   IoMdTv,
   IoIosMusicalNotes,
@@ -51,7 +52,7 @@ class Nav extends Component {
             icon={
               <img
                 src="/images/nintendo-switch-icon.png"
-                style={{ width: 20 }}
+                style={{ width: 18 }}
                 alt="Switch Icon"
               />
             }
@@ -60,6 +61,11 @@ class Nav extends Component {
             path="/release-dates"
             name="Release Dates"
             icon={<IoMdCalendar size={this.iconSize} />}
+          />
+          <NavItem
+            path="/about"
+            name="About"
+            icon={<IoMdHappy size={this.iconSize} />}
           />
         </nav>
       </div>

@@ -3,6 +3,7 @@ import NavDrawerItem from './NavDrawerItem';
 import { BsController, BsFillHouseFill } from 'react-icons/bs';
 import {
   IoMdCalendar,
+  IoMdHappy,
   IoMdRadio,
   IoMdTv,
   IoIosMusicalNotes,
@@ -70,6 +71,12 @@ class NavDrawer extends Component {
           path="/release-dates"
           name="Release Dates"
           icon={<IoMdCalendar size={this.iconSize} />}
+          toggleNavDrawer={this.props.toggleNavDrawer}
+        />
+        <NavDrawerItem
+          path="/about"
+          name="About"
+          icon={<IoMdHappy size={this.iconSize} />}
           toggleNavDrawer={this.props.toggleNavDrawer}
         />
       </nav>
