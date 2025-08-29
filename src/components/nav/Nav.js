@@ -1,25 +1,47 @@
-import React, { Component } from 'react';
-import NavItem from './NavItem';
-import { BsController, BsFillHouseFill } from 'react-icons/bs';
+import React, { Component } from "react";
+import NavItem from "./NavItem";
+import { BsController, BsMouse2Fill } from "react-icons/bs";
 import {
   IoMdCalendar,
   IoMdHappy,
   IoMdRadio,
   IoMdTv,
   IoIosMusicalNotes,
-} from 'react-icons/io';
-import { FaCompactDisc } from 'react-icons/fa';
+} from "react-icons/io";
+import { FaCompactDisc } from "react-icons/fa";
 
 class Nav extends Component {
-  iconSize = '1.5em';
+  iconSize = "1.5em";
   render() {
     return (
       <div>
         <nav className="nav">
           <NavItem
+            path="/masters-courses"
+            name="Master's Courses Completed"
+            icon={
+              <img
+                src="/images/fordham-logo.png"
+                style={{ width: 18 }}
+                alt="Fordham Icon"
+              />
+            }
+          />
+          <NavItem
+            path="/bachelors-courses"
+            name="Bachelor's Courses Completed"
+            icon={
+              <img
+                src="/images/cal-logo.png"
+                style={{ width: 18 }}
+                alt="Cal Icon"
+              />
+            }
+          />
+          <NavItem
             path="/online-courses"
             name="Online Courses Completed"
-            icon={<BsFillHouseFill size={this.iconSize} />}
+            icon={<BsMouse2Fill size={this.iconSize} />}
           />
           <NavItem
             path="/favorite-essential-mixes"

@@ -1,0 +1,212 @@
+{
+  "BachelorsCourses": [
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Sociology 3AC" },
+          "title": { "S": "Principles of Sociology: American Cultures" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "English R1A" },
+          "title": { "S": "Reading and Composition" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Classics 10A" },
+          "title": { "S": "Introduction to Ancient Greece" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Math 1A" },
+          "title": { "S": "Calculus" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Computer Science 9G" },
+          "title": { "S": "Java for Programmers" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Computer Science 61A" },
+          "title": { "S": "Structure and Interpretation of Computer Programs" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Math 1B" },
+          "title": { "S": "Calculus" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Physics 7A" },
+          "title": { "S": "Physics for Scientists and Engineers" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Math 53" },
+          "title": { "S": "Multivariable Calculus" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Electrical Engineering 20N" },
+          "title": { "S": "Systems and Signals" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Computer Science 61B" },
+          "title": { "S": "Data Structures" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Math 54" },
+          "title": { "S": "Linear Algebra and Differential Equations" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Physics 7B" },
+          "title": { "S": "Physics for Scientists and Engineers" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Electrical Engineering 40" },
+          "title": { "S": "Introduction to Microelectronic Circuits" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Computer Science 61C" },
+          "title": { "S": "Machine Structures" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Math 55" },
+          "title": { "S": "Discrete Mathematics" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Physics 7C" },
+          "title": { "S": "Physics for Scientists and Engineers" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Engineering 190" },
+          "title": { "S": "Technical Communication" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Mass Communications N10" },
+          "title": { "S": "Introduction to Mass Media" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Chemistry 1A" },
+          "title": { "S": "General Chemistry" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Electrical Engineering 120" },
+          "title": { "S": "Signals and Systems" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Computer Science 164" },
+          "title": { "S": "Programming Languages and Compilers" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Mass Communications 102" },
+          "title": { "S": "Effects of Mass Media" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Economics 1" },
+          "title": { "S": "Introduction to Economics" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Computer Science 186" },
+          "title": { "S": "Introduction to Database Systems" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "Computer Science 188" },
+          "title": { "S": "Introduction to Artificial Intelligence" }
+        }
+      }
+    }
+  ]
+}

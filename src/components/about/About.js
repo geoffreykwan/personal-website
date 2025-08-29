@@ -18,6 +18,8 @@ class About extends Component {
             src="/images/profile.gif"
             style={{ width: 200 }}
             alt="Profile"
+            onMouseEnter={e => (e.currentTarget.src = "/images/profile-animated.gif")}
+            onMouseLeave={e => (e.currentTarget.src = "/images/profile.gif")}
           ></img>
           <p>
             I created this page to learn how to use React, Lambda, and DynamoDB.

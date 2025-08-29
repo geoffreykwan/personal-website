@@ -1,28 +1,52 @@
-import React, { Component } from 'react';
-import NavDrawerItem from './NavDrawerItem';
-import { BsController, BsFillHouseFill } from 'react-icons/bs';
+import React, { Component } from "react";
+import NavDrawerItem from "./NavDrawerItem";
+import { BsController, BsMouse2Fill } from "react-icons/bs";
 import {
   IoMdCalendar,
   IoMdHappy,
   IoMdRadio,
   IoMdTv,
   IoIosMusicalNotes,
-} from 'react-icons/io';
-import { FaCompactDisc } from 'react-icons/fa';
+} from "react-icons/io";
+import { FaCompactDisc } from "react-icons/fa";
 
 class NavDrawer extends Component {
-  iconSize = '1.5em';
+  iconSize = "1.5em";
   render() {
-    let navDrawerClasses = 'nav-drawer';
+    let navDrawerClasses = "nav-drawer";
     if (this.props.show) {
-      navDrawerClasses = 'nav-drawer open';
+      navDrawerClasses = "nav-drawer open";
     }
     return (
       <nav className={navDrawerClasses}>
         <NavDrawerItem
+          path="/masters-courses"
+          name="Master's Courses Completed"
+          icon={
+            <img
+              src="/images/fordham-logo.png"
+              style={{ width: 15 }}
+              alt="Fordham Icon"
+            />
+          }
+          toggleNavDrawer={this.props.toggleNavDrawer}
+        />
+        <NavDrawerItem
+          path="/bachelors-courses"
+          name="Bachelor's Courses Completed"
+          icon={
+            <img
+              src="/images/cal-logo.png"
+              style={{ width: 15 }}
+              alt="Cal Icon"
+            />
+          }
+          toggleNavDrawer={this.props.toggleNavDrawer}
+        />
+        <NavDrawerItem
           path="/online-courses"
           name="Online Courses Completed"
-          icon={<BsFillHouseFill size={this.iconSize} />}
+          icon={<BsMouse2Fill size={this.iconSize} />}
           toggleNavDrawer={this.props.toggleNavDrawer}
         />
         <NavDrawerItem

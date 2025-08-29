@@ -1,27 +1,29 @@
-import React, { Component } from 'react';
-import './App.css';
-import { MuiThemeProvider } from '@material-ui/core/styles';
-import { createMuiTheme } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Nav from './components/nav/Nav';
-import NavDrawer from './components/nav-drawer/NavDrawer';
-import Backdrop from './components/backdrop/Backdrop';
-import About from './components/about/About';
-import FavoriteEssentialMixes from './components/favorite-essential-mixes/FavoriteEssentialMixes';
-import FavoriteSets from './components/favorite-sets/FavoriteSets';
-import FavoriteAlbums from './components/favorite-albums/FavoriteAlbums';
-import FavoriteGames from './components/favorite-games/FavoriteGames';
-import OnlineCourses from './components/online-courses/OnlineCourses';
-import ReleaseDates from './components/release-dates/ReleaseDates';
-import ReleaseDate from './components/release-dates/ReleaseDate';
-import FavoriteShows from './components/favorite-shows/FavoriteShows';
-import NintendoSwitchGames from './components/nintendo-switch-games/NintendoSwitchGames';
+import React, { Component } from "react";
+import "./App.css";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import { createMuiTheme } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Nav from "./components/nav/Nav";
+import NavDrawer from "./components/nav-drawer/NavDrawer";
+import Backdrop from "./components/backdrop/Backdrop";
+import About from "./components/about/About";
+import FavoriteEssentialMixes from "./components/favorite-essential-mixes/FavoriteEssentialMixes";
+import FavoriteSets from "./components/favorite-sets/FavoriteSets";
+import FavoriteAlbums from "./components/favorite-albums/FavoriteAlbums";
+import FavoriteGames from "./components/favorite-games/FavoriteGames";
+import BachelorsCourses from "./components/bachelors-courses/BachelorsCourses";
+import MastersCourses from "./components/masters-courses/MastersCourses";
+import OnlineCourses from "./components/online-courses/OnlineCourses";
+import ReleaseDates from "./components/release-dates/ReleaseDates";
+import ReleaseDate from "./components/release-dates/ReleaseDate";
+import FavoriteShows from "./components/favorite-shows/FavoriteShows";
+import NintendoSwitchGames from "./components/nintendo-switch-games/NintendoSwitchGames";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-} from 'react-router-dom';
+} from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -35,9 +37,9 @@ class App extends Component {
   render() {
     this.theme = createMuiTheme({
       palette: {
-        type: 'dark',
+        type: "dark",
         background: {
-          default: '#222',
+          default: "#222",
         },
       },
     });
@@ -48,7 +50,7 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={this.theme}>
         <CssBaseline />
-        <div className="App" style={{ display: 'flex' }}>
+        <div className="App" style={{ display: "flex" }}>
           <Router>
             <Nav />
             <div className="main">
@@ -58,6 +60,28 @@ class App extends Component {
               />
               {backdrop}
               <Switch>
+                <Route
+                  path="/masters-courses"
+                  exact
+                  render={() => {
+                    return (
+                      <MastersCourses
+                        menuButtonClickHandler={this.toggleNavDrawer}
+                      />
+                    );
+                  }}
+                />
+                <Route
+                  path="/bachelors-courses"
+                  exact
+                  render={() => {
+                    return (
+                      <BachelorsCourses
+                        menuButtonClickHandler={this.toggleNavDrawer}
+                      />
+                    );
+                  }}
+                />
                 <Route
                   path="/online-courses"
                   exact
@@ -168,7 +192,7 @@ class App extends Component {
                   }}
                 />
                 <Route exact path="/">
-                  <Redirect to="/online-courses" />
+                  <Redirect to="/masters-courses" />
                 </Route>
               </Switch>
             </div>

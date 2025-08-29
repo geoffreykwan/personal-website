@@ -1,0 +1,84 @@
+{
+  "MastersCourses": [
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "CISC 5650" },
+          "title": { "S": "Cybersecurity Essentials" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "CISC 5009" },
+          "title": { "S": "Network Essentials" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "CISC 5750" },
+          "title": { "S": "Information Security and Ethics" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "CISC 7050" },
+          "title": { "S": "Penetration Testing" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "CISC 6680" },
+          "title": { "S": "Intrusion Detection and Network Forensics" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "CISC 5770" },
+          "title": { "S": "Intelligence in Cybersecurity" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "CISC 6630" },
+          "title": { "S": "Wireless Security" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "CISC 6920" },
+          "title": { "S": "Incident Response and Risk Management" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "CISC 6650" },
+          "title": { "S": "Forensic Computing" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "courseNumber": { "S": "CISC 6090" },
+          "title": { "S": "Capstone Project in Cybersecurity" }
+        }
+      }
+    }
+  ]
+}
