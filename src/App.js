@@ -13,6 +13,7 @@ import FavoriteAlbums from "./components/favorite-albums/FavoriteAlbums";
 import FavoriteGames from "./components/favorite-games/FavoriteGames";
 import BachelorsCourses from "./components/bachelors-courses/BachelorsCourses";
 import MastersCourses from "./components/masters-courses/MastersCourses";
+import Certifications from "./components/certifications/Certifications";
 import OnlineCourses from "./components/online-courses/OnlineCourses";
 import ReleaseDates from "./components/release-dates/ReleaseDates";
 import ReleaseDate from "./components/release-dates/ReleaseDate";
@@ -77,6 +78,17 @@ class App extends Component {
                   render={() => {
                     return (
                       <BachelorsCourses
+                        menuButtonClickHandler={this.toggleNavDrawer}
+                      />
+                    );
+                  }}
+                />
+                <Route
+                  path="/certifications"
+                  exact
+                  render={() => {
+                    return (
+                      <Certifications
                         menuButtonClickHandler={this.toggleNavDrawer}
                       />
                     );

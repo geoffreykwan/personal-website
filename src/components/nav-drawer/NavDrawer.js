@@ -9,6 +9,7 @@ import {
   IoIosMusicalNotes,
 } from "react-icons/io";
 import { FaCompactDisc } from "react-icons/fa";
+import { PiCertificateFill } from "react-icons/pi";
 
 class NavDrawer extends Component {
   iconSize = "1.5em";
@@ -41,6 +42,12 @@ class NavDrawer extends Component {
               alt="Cal Icon"
             />
           }
+          toggleNavDrawer={this.props.toggleNavDrawer}
+        />
+        <NavDrawerItem
+          path="/certifications"
+          name="Certifications"
+          icon={<PiCertificateFill size={this.iconSize} />}
           toggleNavDrawer={this.props.toggleNavDrawer}
         />
         <NavDrawerItem

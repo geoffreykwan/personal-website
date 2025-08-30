@@ -9,6 +9,7 @@ import {
   IoIosMusicalNotes,
 } from "react-icons/io";
 import { FaCompactDisc } from "react-icons/fa";
+import { PiCertificateFill } from "react-icons/pi";
 
 class Nav extends Component {
   iconSize = "1.5em";
@@ -37,6 +38,11 @@ class Nav extends Component {
                 alt="Cal Icon"
               />
             }
+          />
+          <NavItem
+            path="/certifications"
+            name="Certifications"
+            icon={<PiCertificateFill size={this.iconSize} />}
           />
           <NavItem
             path="/online-courses"
