@@ -1,32 +1,37 @@
-import React from 'react';
-import Table from '@material-ui/core/Table';
-import TableHead from '@material-ui/core/TableHead';
-import TableBody from '@material-ui/core/TableBody';
-import TableRow from '@material-ui/core/TableRow';
-import TableCell from '@material-ui/core/TableCell';
-import SortableComponent from '../shared/SortableComponent';
-import orderBy from 'lodash/orderBy';
-import CustomTableSortLabel from '../shared/CustomTableSortLabel';
-import MenuButton from '../menu-button/MenuButton';
+import React from "react";
+import Table from "@material-ui/core/Table";
+import TableHead from "@material-ui/core/TableHead";
+import TableBody from "@material-ui/core/TableBody";
+import TableRow from "@material-ui/core/TableRow";
+import TableCell from "@material-ui/core/TableCell";
+import SortableComponent from "../shared/SortableComponent";
+import orderBy from "lodash/orderBy";
+import CustomTableSortLabel from "../shared/CustomTableSortLabel";
+import MenuButton from "../menu-button/MenuButton";
 
 class OnlineCourses extends SortableComponent {
   state = {
     loaded: false,
     courses: [],
-    columnToSort: 'site',
-    sortDirection: 'asc',
+    columnToSort: "site",
+    sortDirection: "asc",
   };
   componentDidMount() {
     this.getOnlineCourses();
   }
   getOnlineCourses() {
     fetch(`${process.env.REACT_APP_API_URL}/online-courses`, {
-      method: 'GET',
+      method: "GET",
     })
       .then((res) => {
         return res.json();
       })
       .then((courses) => {
+        courses
+          .filter((course) => course.organization == null)
+          .forEach((course) => {
+            course.organization = "";
+          });
         this.setState({ courses: courses, loaded: true });
       });
   }
@@ -35,7 +40,7 @@ class OnlineCourses extends SortableComponent {
       <a
         href={course.link}
         target="_blank"
-        style={{ color: 'dodgerblue' }}
+        style={{ color: "dodgerblue" }}
         rel="noopener noreferrer"
       >
         {course.site}
@@ -44,7 +49,7 @@ class OnlineCourses extends SortableComponent {
   }
   render() {
     return (
-      <div style={this.state.loaded ? {} : { display: 'none' }}>
+      <div style={this.state.loaded ? {} : { display: "none" }}>
         <div className="page-title-container">
           <MenuButton
             menuButtonClickHandler={this.props.menuButtonClickHandler}
