@@ -81,7 +81,7 @@ class BachelorsCourses extends SortableComponent {
               [(course) => course[this.state.columnToSort].toLowerCase()],
               this.state.sortDirection
             ).map((course) => (
-              <TableRow key={course.title} hover={true}>
+              <TableRow key={course.courseNumber} hover={true}>
                 <TableCell>{course.courseNumber}</TableCell>
                 <TableCell>{course.title}</TableCell>
               </TableRow>
